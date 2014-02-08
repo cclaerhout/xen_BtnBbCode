@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="sedo_bbm_btn" title="BBM - Button Bb Code" version_string="1.0" version_id="0" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="bbm_callback_template_pre" execute_order="10" callback_class="Sedo_BtnBbCode_Listeners" callback_method="parseTagBtn" active="1" hint="sedo_adv_btn" description="Button Bb Code formatter"/>
+    <listener event_id="tinyquattro_setup" execute_order="15" callback_class="Sedo_BtnBbCode_Listeners" callback_method="mceConfig" active="1" hint="" description="Mce Config"/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="sedo_bbcode_btn_create" global_cache="1" version_id="0" version_string="1.0"><![CDATA[Create a button]]></phrase>
+    <phrase title="sedo_bbm_btn_button_block_align" version_id="0" version_string="1.0"><![CDATA[Block align]]></phrase>
+    <phrase title="sedo_bbm_btn_button_block_align_bcenter" version_id="0" version_string="1.0"><![CDATA[Block center]]></phrase>
+    <phrase title="sedo_bbm_btn_button_block_align_bleft" version_id="0" version_string="1.0"><![CDATA[Block left]]></phrase>
+    <phrase title="sedo_bbm_btn_button_block_align_bright" version_id="0" version_string="1.0"><![CDATA[Block right]]></phrase>
+    <phrase title="sedo_bbm_btn_button_block_mode" version_id="0" version_string="1.0"><![CDATA[Block mode]]></phrase>
+    <phrase title="sedo_bbm_btn_button_creator" version_id="0" version_string="1.0"><![CDATA[Button creator]]></phrase>
+    <phrase title="sedo_bbm_btn_button_style" version_id="0" version_string="1.0"><![CDATA[Button style]]></phrase>
+    <phrase title="sedo_bbm_btn_button_url_href_self" version_id="0" version_string="1.0"><![CDATA[Open in the same window?]]></phrase>
+    <phrase title="sedo_bbm_btn_custom_style" version_id="0" version_string="1.0"><![CDATA[Custom style]]></phrase>
+    <phrase title="sedo_bbm_btn_font_color" version_id="0" version_string="1.0"><![CDATA[Font color]]></phrase>
+    <phrase title="sedo_bbm_btn_font_color_alert" version_id="0" version_string="1.0"><![CDATA[Select a button first]]></phrase>
+    <phrase title="sedo_bbm_btn_options" version_id="0" version_string="1.0"><![CDATA[Options]]></phrase>
+    <phrase title="sedo_bbm_btn_style" version_id="0" version_string="1.0"><![CDATA[Style]]></phrase>
+    <phrase title="style_property_group_sedo_bbm_btn_master" version_id="0" version_string="1.0"><![CDATA[[Bb Codes & Buttons Manager] Button Bb Code]]></phrase>
+    <phrase title="style_property_group_sedo_bbm_btn_master_desc" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_default_color_description_master" version_id="0" version_string="1.0"><![CDATA[If you want to use the default text color of message, select this value:  @contentText. But most of the time, a white font would be better. You can override this anyway by setting a color to the text (content of the Bb Code) inside the editor.]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_default_color_master" version_id="0" version_string="1.0"><![CDATA[Default color]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_moda_col1_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_moda_col1_master" version_id="0" version_string="1.0"><![CDATA[Modele A - Gradient color (1)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_moda_col2_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_moda_col2_master" version_id="0" version_string="1.0"><![CDATA[Modele A - Gradient color (2)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modb_col1_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modb_col1_master" version_id="0" version_string="1.0"><![CDATA[Modele B - Gradient color (1)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modb_col2_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modb_col2_master" version_id="0" version_string="1.0"><![CDATA[Modele B - Gradient color (2)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modc_col1_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modc_col1_master" version_id="0" version_string="1.0"><![CDATA[Modele C - Gradient color (1)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modc_col2_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modc_col2_master" version_id="0" version_string="1.0"><![CDATA[Modele C - Gradient color (2)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modd_col1_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modd_col1_master" version_id="0" version_string="1.0"><![CDATA[Modele D - Gradient color (1)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modd_col2_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modd_col2_master" version_id="0" version_string="1.0"><![CDATA[Modele D - Gradient color (2)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_mode_col1_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_mode_col1_master" version_id="0" version_string="1.0"><![CDATA[Modele E - Gradient color (1)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_mode_col2_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_mode_col2_master" version_id="0" version_string="1.0"><![CDATA[Modele E - Gradient color (2)]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modf_col2_description_master" version_id="0" version_string="1.0"><![CDATA[]]></phrase>
+    <phrase title="style_property_sedo_bbm_btn_modf_col2_master" version_id="0" version_string="1.0"><![CDATA[Modele F - Gradient color (2)]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties>
+    <property property_name="sedo_bbm_btn_moda_col1" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele A - Gradient color (1)" description="" css_components="" scalar_type="color" scalar_parameters="" display_order="110" sub_group="model_a"><![CDATA[@primaryLighter]]></property>
+    <property property_name="sedo_bbm_btn_moda_col2" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele A - Gradient color (2)" description="" css_components="" scalar_type="color" scalar_parameters="" display_order="120" sub_group="model_a"><![CDATA[@primaryLightish]]></property>
+    <property property_name="sedo_bbm_btn_modb_col1" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele B - Gradient color (1)" description="" css_components="text,background,border,layout,extra" scalar_type="color" scalar_parameters="" display_order="110" sub_group="model_b"><![CDATA[@secondaryLight]]></property>
+    <property property_name="sedo_bbm_btn_modb_col2" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele B - Gradient color (2)" description="" css_components="text,background,border,layout,extra" scalar_type="color" scalar_parameters="" display_order="120" sub_group="model_b"><![CDATA[@secondaryMedium]]></property>
+    <property property_name="sedo_bbm_btn_modc_col1" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele C - Gradient color (1)" description="" css_components="text,background,border,layout,extra" scalar_type="color" scalar_parameters="" display_order="110" sub_group="model_c"><![CDATA[#b8e356]]></property>
+    <property property_name="sedo_bbm_btn_modc_col2" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele C - Gradient color (2)" description="" css_components="text,background,border,layout,extra" scalar_type="color" scalar_parameters="" display_order="120" sub_group="model_c"><![CDATA[#a5cc52]]></property>
+    <property property_name="sedo_bbm_btn_modd_col1" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele D - Gradient color (1)" description="" css_components="text,background,border,layout,extra" scalar_type="color" scalar_parameters="" display_order="110" sub_group="model_d"><![CDATA[#ffec64]]></property>
+    <property property_name="sedo_bbm_btn_modd_col2" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele D - Gradient color (2)" description="" css_components="text,background,border,layout,extra" scalar_type="color" scalar_parameters="" display_order="120" sub_group="model_d"><![CDATA[#ffab23]]></property>
+    <property property_name="sedo_bbm_btn_mode_col1" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele E - Gradient color (1)" description="" css_components="text,background,border,layout,extra" scalar_type="color" scalar_parameters="" display_order="110" sub_group="model_e"><![CDATA[rgb(254, 26, 0)]]></property>
+    <property property_name="sedo_bbm_btn_mode_col2" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele E - Gradient color (2)" description="" css_components="" scalar_type="color" scalar_parameters="" display_order="120" sub_group="model_e"><![CDATA[#ce0100]]></property>
+    <property property_name="sedo_bbm_btn_modf_col2" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Modele F - Gradient color (2)" description="" css_components="text,background,border,layout,extra" scalar_type="color" scalar_parameters="" display_order="120" sub_group="model_f"><![CDATA[#dfdfdf]]></property>
+    <property property_name="sedo_bbm_btn_default_color" property_type="scalar" definition="1" group_name="sedo_bbm_btn" title="Default color" description="If you want to use the default text color of message, select this value:  @contentText. But most of the time, a white font would be better. You can override this anyway by setting a color to the text (content of the Bb Code) inside the editor." css_components="text,background,border,layout,extra" scalar_type="color" scalar_parameters="" display_order="5" sub_group=""><![CDATA[rgb(255, 255, 255)]]></property>
+    <group group_name="sedo_bbm_btn" display_order="13212">
+      <title>[Bb Codes &amp; Buttons Manager] Button Bb Code</title>
+      <description></description>
+    </group>
+  </style_properties>
+  <templates>
+    <template title="bbm_bbcode_btn" version_id="0" version_string="1.0"><![CDATA[<xen:require css="bbm_bbcode_btn.css" />
+
+<xen:if is="{$options.blockAlign}"><div class="bbm_button_wrapper {$options.blockAlign}"></xen:if>
+	<xen:if is="{$options.url}">
+		<a href="{xen:raw $options.url}" {$options.target} class="bbm_button {$options.model}" {xen:raw $options.inlineCss}>{xen:raw $content}</a>
+	<xen:else />
+		<div class="bbm_button {$options.model}" {xen:raw $options.inlineCss}>{xen:raw $content}</div>
+	</xen:if>
+<xen:if is="{$options.blockAlign}"></div></xen:if>]]></template>
+    <template title="bbm_bbcode_btn.css" version_id="0" version_string="1.0"><![CDATA[.messageContent .messageText .bbm_button,
+.mce-container .bbm_button,
+.bbm_button {
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	color: {xen:property sedo_bbm_btn_default_color};
+	font-family:arial;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	margin:1px;
+}
+
+	.messageContent .messageText .bbm_button.moda,
+	.bbm_button.moda {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_moda_col1}), color-stop(1, {xen:property sedo_bbm_btn_moda_col2}));
+		background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_moda_col1} 5%, {xen:property sedo_bbm_btn_moda_col2} 100%);
+		background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_moda_col1} 5%, {xen:property sedo_bbm_btn_moda_col2} 100%);
+		background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_moda_col1} 5%, {xen:property sedo_bbm_btn_moda_col2} 100%);
+		background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_moda_col1} 5%, {xen:property sedo_bbm_btn_moda_col2} 100%);
+		background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_moda_col1} 5%, {xen:property sedo_bbm_btn_moda_col2} 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_moda_col1}', endColorstr='{xen:property sedo_bbm_btn_moda_col2}',GradientType=0);
+		background-color:{xen:property sedo_bbm_btn_moda_col2};
+
+		border:1px solid {xen:property sedo_bbm_btn_moda_col1};
+		text-shadow:0px 1px 0px {xen:property sedo_bbm_btn_moda_col2};
+		-moz-box-shadow:inset 0px 1px 0px 0px {xen:property sedo_bbm_btn_moda_col1};
+		-webkit-box-shadow:inset 0px 1px 0px 0px {xen:property sedo_bbm_btn_moda_col1};
+		box-shadow:inset 0px 1px 0px 0px {xen:property sedo_bbm_btn_moda_col1};
+	}
+
+		.messageContent .messageText .bbm_button.moda:hover,
+		.bbm_button.moda:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_moda_col2}), color-stop(1, {xen:property sedo_bbm_btn_moda_col1}));
+			background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_moda_col2} 5%, {xen:property sedo_bbm_btn_moda_col1} 100%);
+			background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_moda_col2} 5%, {xen:property sedo_bbm_btn_moda_col1} 100%);
+			background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_moda_col2} 5%, {xen:property sedo_bbm_btn_moda_col1} 100%);
+			background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_moda_col2} 5%, {xen:property sedo_bbm_btn_moda_col1} 100%);
+			background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_moda_col2} 5%, {xen:property sedo_bbm_btn_moda_col1} 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_moda_col2}', endColorstr='{xen:property sedo_bbm_btn_moda_col1}',GradientType=0);
+			background-color:{xen:property sedo_bbm_btn_moda_col1};
+
+			box-shadow:inset 0px 1px 0px 0px {xen:property sedo_bbm_btn_moda_col2};
+		}
+
+	.messageContent .messageText .bbm_button.modb,
+	.bbm_button.modb {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_modb_col1}), color-stop(1, {xen:property sedo_bbm_btn_modb_col2}));
+		background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_modb_col1} 5%, {xen:property sedo_bbm_btn_modb_col2} 100%);
+		background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_modb_col1} 5%, {xen:property sedo_bbm_btn_modb_col2} 100%);
+		background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_modb_col1} 5%, {xen:property sedo_bbm_btn_modb_col2} 100%);
+		background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_modb_col1} 5%, {xen:property sedo_bbm_btn_modb_col2} 100%);
+		background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_modb_col1} 5%, {xen:property sedo_bbm_btn_modb_col2} 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_modb_col1}', endColorstr='{xen:property sedo_bbm_btn_modb_col2}',GradientType=0);
+		background-color:{xen:property sedo_bbm_btn_modb_col2};
+
+		border:1px solid {xen:property sedo_bbm_btn_modb_col1};
+		text-shadow:0px 1px 0px {xen:property sedo_bbm_btn_modb_col2};
+	}
+
+		.messageContent .messageText .bbm_button.modb:hover,
+		.bbm_button.modb:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_modb_col2}), color-stop(1, {xen:property sedo_bbm_btn_modb_col1}));
+			background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_modb_col2} 5%, {xen:property sedo_bbm_btn_modb_col1} 100%);
+			background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_modb_col2} 5%, {xen:property sedo_bbm_btn_modb_col1} 100%);
+			background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_modb_col2} 5%, {xen:property sedo_bbm_btn_modb_col1} 100%);
+			background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_modb_col2} 5%, {xen:property sedo_bbm_btn_modb_col1} 100%);
+			background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_modb_col2} 5%, {xen:property sedo_bbm_btn_modb_col1} 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_modb_col2}', endColorstr='{xen:property sedo_bbm_btn_modb_col1}',GradientType=0);
+			background-color:{xen:property sedo_bbm_btn_modb_col1};
+
+			box-shadow:inset 0px 1px 0px 0px {xen:property sedo_bbm_btn_modb_col2};
+		}
+
+	.messageContent .messageText .bbm_button.modc,
+	.bbm_button.modc {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_modc_col1}), color-stop(1, {xen:property sedo_bbm_btn_modc_col2}));
+		background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_modc_col1} 5%, {xen:property sedo_bbm_btn_modc_col2} 100%);
+		background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_modc_col1} 5%, {xen:property sedo_bbm_btn_modc_col2} 100%);
+		background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_modc_col1} 5%, {xen:property sedo_bbm_btn_modc_col2} 100%);
+		background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_modc_col1} 5%, {xen:property sedo_bbm_btn_modc_col2} 100%);
+		background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_modc_col1} 5%, {xen:property sedo_bbm_btn_modc_col2} 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_modc_col1}', endColorstr='{xen:property sedo_bbm_btn_modc_col2}',GradientType=0);
+		background-color:{xen:property sedo_bbm_btn_modc_col2};
+
+		border:1px solid {xen:property sedo_bbm_btn_modc_col1};
+		text-shadow:0px 1px 0px {xen:property sedo_bbm_btn_modc_col2};
+	}
+
+		.messageContent .messageText .bbm_button.modc:hover,
+		.bbm_button.modc:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_modc_col2}), color-stop(1, {xen:property sedo_bbm_btn_modc_col1}));
+			background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_modc_col2} 5%, {xen:property sedo_bbm_btn_modc_col1} 100%);
+			background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_modc_col2} 5%, {xen:property sedo_bbm_btn_modc_col1} 100%);
+			background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_modc_col2} 5%, {xen:property sedo_bbm_btn_modc_col1} 100%);
+			background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_modc_col2} 5%, {xen:property sedo_bbm_btn_modc_col1} 100%);
+			background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_modc_col2} 5%, {xen:property sedo_bbm_btn_modc_col1} 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_modc_col2}', endColorstr='{xen:property sedo_bbm_btn_modc_col1}',GradientType=0);
+			background-color:{xen:property sedo_bbm_btn_modc_col1};
+
+			box-shadow:inset 0px 1px 0px 0px {xen:property sedo_bbm_btn_modc_col2};
+		}
+
+	.messageContent .messageText .bbm_button.modd,
+	.bbm_button.modd {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_modd_col1}), color-stop(1, {xen:property sedo_bbm_btn_modd_col2}));
+		background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_modd_col1} 5%, {xen:property sedo_bbm_btn_modd_col2} 100%);
+		background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_modd_col1} 5%, {xen:property sedo_bbm_btn_modd_col2} 100%);
+		background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_modd_col1} 5%, {xen:property sedo_bbm_btn_modd_col2} 100%);
+		background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_modd_col1} 5%, {xen:property sedo_bbm_btn_modd_col2} 100%);
+		background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_modd_col1} 5%, {xen:property sedo_bbm_btn_modd_col2} 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_modd_col1}', endColorstr='{xen:property sedo_bbm_btn_modd_col2}',GradientType=0);
+		background-color:{xen:property sedo_bbm_btn_modd_col2};
+
+		border:1px solid {xen:property sedo_bbm_btn_modd_col1};
+		text-shadow:0px 1px 0px {xen:property sedo_bbm_btn_modd_col2};
+	}
+
+		.messageContent .messageText .bbm_button.modd:hover,
+		.bbm_button.modd:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_modd_col2}), color-stop(1, {xen:property sedo_bbm_btn_modd_col1}));
+			background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_modd_col2} 5%, {xen:property sedo_bbm_btn_modd_col1} 100%);
+			background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_modd_col2} 5%, {xen:property sedo_bbm_btn_modd_col1} 100%);
+			background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_modd_col2} 5%, {xen:property sedo_bbm_btn_modd_col1} 100%);
+			background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_modd_col2} 5%, {xen:property sedo_bbm_btn_modd_col1} 100%);
+			background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_modd_col2} 5%, {xen:property sedo_bbm_btn_modd_col1} 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_modd_col2}', endColorstr='{xen:property sedo_bbm_btn_modd_col1}',GradientType=0);
+			background-color:{xen:property sedo_bbm_btn_modd_col1};
+
+			box-shadow:inset 0px 1px 0px 0px {xen:property sedo_bbm_btn_modd_col2};
+		}
+
+	.messageContent .messageText .bbm_button.mode,
+	.bbm_button.mode {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_mode_col1}), color-stop(1, {xen:property sedo_bbm_btn_mode_col2}));
+		background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_mode_col1} 5%, {xen:property sedo_bbm_btn_mode_col2} 100%);
+		background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_mode_col1} 5%, {xen:property sedo_bbm_btn_mode_col2} 100%);
+		background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_mode_col1} 5%, {xen:property sedo_bbm_btn_mode_col2} 100%);
+		background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_mode_col1} 5%, {xen:property sedo_bbm_btn_mode_col2} 100%);
+		background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_mode_col1} 5%, {xen:property sedo_bbm_btn_mode_col2} 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_mode_col1}', endColorstr='{xen:property sedo_bbm_btn_mode_col2}',GradientType=0);
+		background-color:{xen:property sedo_bbm_btn_mode_col2};
+
+		border:1px solid {xen:property sedo_bbm_btn_mode_col1};
+		text-shadow:0px 1px 0px {xen:property sedo_bbm_btn_mode_col2};
+	}
+
+		.messageContent .messageText .bbm_button.mode:hover,
+		.bbm_button.mode:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_mode_col2}), color-stop(1, {xen:property sedo_bbm_btn_mode_col1}));
+			background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_mode_col2} 5%, {xen:property sedo_bbm_btn_mode_col1} 100%);
+			background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_mode_col2} 5%, {xen:property sedo_bbm_btn_mode_col1} 100%);
+			background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_mode_col2} 5%, {xen:property sedo_bbm_btn_mode_col1} 100%);
+			background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_mode_col2} 5%, {xen:property sedo_bbm_btn_mode_col1} 100%);
+			background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_mode_col2} 5%, {xen:property sedo_bbm_btn_mode_col1} 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_mode_col2}', endColorstr='{xen:property sedo_bbm_btn_mode_col1}',GradientType=0);
+			background-color:{xen:property sedo_bbm_btn_mode_col1};
+
+			box-shadow:inset 0px 1px 0px 0px {xen:property sedo_bbm_btn_mode_col2};
+		}
+
+	.messageContent .messageText .bbm_button.modf,
+	.bbm_button.modf {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_modf_col1}), color-stop(1, {xen:property sedo_bbm_btn_modf_col2}));
+		background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_modf_col1} 5%, {xen:property sedo_bbm_btn_modf_col2} 100%);
+		background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_modf_col1} 5%, {xen:property sedo_bbm_btn_modf_col2} 100%);
+		background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_modf_col1} 5%, {xen:property sedo_bbm_btn_modf_col2} 100%);
+		background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_modf_col1} 5%, {xen:property sedo_bbm_btn_modf_col2} 100%);
+		background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_modf_col1} 5%, {xen:property sedo_bbm_btn_modf_col2} 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_modf_col1}', endColorstr='{xen:property sedo_bbm_btn_modf_col2}',GradientType=0);
+		background-color:{xen:property sedo_bbm_btn_modf_col2};
+
+		border:1px solid {xen:property sedo_bbm_btn_modf_col1};
+		text-shadow:0px 1px 0px {xen:property sedo_bbm_btn_modf_col2};
+	}
+
+		.messageContent .messageText .bbm_button.modf:hover,
+		.bbm_button.modf:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {xen:property sedo_bbm_btn_modf_col2}), color-stop(1, {xen:property sedo_bbm_btn_modf_col1}));
+			background:-moz-linear-gradient(top, {xen:property sedo_bbm_btn_modf_col2} 5%, {xen:property sedo_bbm_btn_modf_col1} 100%);
+			background:-webkit-linear-gradient(top, {xen:property sedo_bbm_btn_modf_col2} 5%, {xen:property sedo_bbm_btn_modf_col1} 100%);
+			background:-o-linear-gradient(top, {xen:property sedo_bbm_btn_modf_col2} 5%, {xen:property sedo_bbm_btn_modf_col1} 100%);
+			background:-ms-linear-gradient(top, {xen:property sedo_bbm_btn_modf_col2} 5%, {xen:property sedo_bbm_btn_modf_col1} 100%);
+			background:linear-gradient(to bottom, {xen:property sedo_bbm_btn_modf_col2} 5%, {xen:property sedo_bbm_btn_modf_col1} 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{xen:property sedo_bbm_btn_modf_col2}', endColorstr='{xen:property sedo_bbm_btn_modf_col1}',GradientType=0);
+			background-color:{xen:property sedo_bbm_btn_modf_col1};
+
+			box-shadow:inset 0px 1px 0px 0px {xen:property sedo_bbm_btn_modf_col2};
+		}
+
+.messageContent .messageText .bbm_button:active,
+.mce-container .bbm_button:active,
+.bbm_button:active {
+	position:relative;
+	top:1px;
+}
+
+.messageContent .messageText .bbm_button_wrapper,
+.mce-container .bbm_button_wrapper,
+.bbm_button_wrapper {
+	display:inline-block;
+	width:100%;
+}
+
+
+.messageContent .messageText bbm_button_wrapper.bleft,
+.bbm_button.bleft {
+	text-align: left;
+}
+
+.messageContent .messageText .bbm_button_wrapper.bcenter,
+.bbm_button.bcenter {
+	text-align: center;
+}
+
+.messageContent .messageText .bbm_button_wrapper.bright,
+.bbm_button.bright {
+	text-align: right;
+}]]></template>
+    <template title="quattro_dialog_bbm_adv_button" version_id="0" version_string="1.0"><![CDATA[<xen:require css="quattro_dialog.css" />
+<xen:require css="bbm_bbcode_btn.css" />
+<xen:require css="quattro_dialog_bbm_adv_button.css" />
+<link rel="stylesheet" href="js/sedo/btnbbcode/colpick/colpick.css" />
+
+<xen:require js="js/sedo/btnbbcode/colpick/colpick.js" />
+<xen:require js="js/sedo/btnbbcode/tinyquattro/btn.min.js" />
+
+<xen:set var="$btn_models" value="{xen:array '0=a','1=b', '2=c','3=d','4=e','5=f'}" />
+
+<div class="mceTitle FastReload" data-width="300" data-height="370">{xen:phrase sedo_bbm_btn_button_creator}</div>
+
+
+<div id="bbm_adv_button">
+	<div class="mceTabs">
+		<div id="bbm_adv_button_button">{xen:phrase sedo_bbm_btn_button_style}</div>
+		<div id="bbm_adv_button_options">{xen:phrase sedo_bbm_btn_options}</div>
+	</div>
+	<div class="mcePanes">
+		<div id="xenpane_adv_btn_button">
+			<div class="models_ctrl_wrapper">
+				<p><input name="text" type="text" 
+					class="buttontext mce-textbox MceReset MceLinkText MceSelec" 
+					<xen:if is="{$isLink} && {$urlDatas.text}">
+						value="{$urlDatas.text}"
+					<xen:elseif is="!{$isUrl} && {$selection.text}" />
+						value="{$selection.text}"
+					<xen:else />
+						value="..."
+					</xen:if>
+				/></p>
+				<div class="models_selection">
+					<xen:foreach loop="$btn_models" key="$key" value="$model">
+						<p><span class="bbm_button mod{$model}" data-model="mod{$model}" data-phrase="{xen:phrase sedo_bbm_btn_button_style}">{xen:phrase sedo_bbm_btn_button_style}</span></p>
+					</xen:foreach>
+					<p><span class="bbm_button adv_cstm custColorPicker" data-model="cstm" data-phrase="{xen:phrase sedo_bbm_btn_custom_style}">{xen:phrase sedo_bbm_btn_custom_style}</span></p>
+					<input name="style" type="hidden" class="MceReset" value="" />
+					<input name="style_bgcolor" type="hidden" class="MceReset" value="" />
+					<input name="style_color" type="hidden" class="MceReset" value="" />
+					<input name="style_color_model" type="hidden" class="MceReset" value="" />
+				</div>
+				<div class="commands">
+					<p class="FontColor custColorPicker" data-alert="{xen:phrase sedo_bbm_btn_font_color_alert}">{xen:phrase sedo_bbm_btn_font_color}</p>
+				</div>
+			</div>
+		</div>
+		<div id="xenpane_adv_btn_options">
+			<dl>
+				<dt>{xen:phrase sedo_quattro_link_url}</dt>
+				<dd><input	name="url"
+						type="text"
+						class="ctrl_url mce-textbox MceReset MceLink"
+						{xen:if '{$isLink} && {$urlDatas.href}', 'value="{$urlDatas.href}"'}
+					/>
+				</dd>
+				<dt></dt>
+				<dd>
+		  			<div 	class="xenCheckBox url_href" 
+			  			data-phrase="{xen:phrase sedo_bbm_btn_button_url_href_self}"
+			  			data-inputname="urlHref">
+			  		</div>
+			  	</dd>				
+			</dl>
+			<hr>
+			<dl class="xenmce_inline">
+				<dt>{xen:phrase sedo_bbm_btn_button_block_mode}</dt>
+				<dd>
+		  			<div 	class="xenCheckBox btn_block" 
+			  			data-inputname="btnBlock">
+			  		</div>
+			  	</dd>				
+			</dl>
+			<dl>
+				<dt>{xen:phrase sedo_bbm_btn_button_block_align}</dt>
+				<dd>
+					<select name="blockalign" class="mce-textbox">
+						<option value="bleft">{xen:phrase sedo_bbm_btn_button_block_align_bleft}</option>
+						<option value="bcenter">{xen:phrase sedo_bbm_btn_button_block_align_bcenter}</option>
+						<option value="bright">{xen:phrase sedo_bbm_btn_button_block_align_bright}</option>
+					</select>
+				</dd>
+			</dl>
+			<hr>									
+		</div>
+	</div>
+</div>]]></template>
+    <template title="quattro_dialog_bbm_adv_button.css" version_id="0" version_string="1.0"><![CDATA[.mce-xen-body #bbm_adv_button .adv_cstm{
+	border: 1px dashed {xen:property faintTextColor};
+	color: {xen:property dimmedTextColor};
+}
+
+.mce-xen-body #bbm_adv_button .buttontext {
+	display: block;
+	width: 85%;
+	margin: 5px auto;
+	text-align: center;
+}
+
+.mce-xen-body #bbm_adv_button .models_ctrl_wrapper{
+	text-align: center;
+	padding: 5px;
+}
+
+.mce-xen-body #bbm_adv_button .bbm_button{
+	display: block;
+	margin: 3px auto;
+	overflow: hidden;
+	text-align: center;
+	text-overflow: ellipsis;	
+}
+
+.mce-xen-body #bbm_adv_button .bbm_button.active{
+	box-shadow: 0px 0px 2px {xen:property dimmedTextColor};
+}
+
+.mce-xen-body #bbm_adv_button .bbm_button.active .mce-i-selected{
+	float: right;
+	visibility: visible;
+}
+
+.mce-xen-body #bbm_adv_button .xenCheckBox.btn_block {
+	position: relative;
+	top: -2px;
+}
+
+.mce-xen-body #bbm_adv_button .ctrl_url {
+	width: 95%;
+}
+
+.mce-xen-body #bbm_adv_button .commands {
+	display: block;
+	padding: 10px 0;
+}
+
+
+.mce-xen-body #bbm_adv_button .commands p {
+	display: inline;
+	text-align: left;
+	padding: 4px;
+	border: 1px solid {xen:property primaryLightish};
+	color: {xen:property primaryDarker};
+	background-color: {xen:property primaryLighter};
+	cursor: pointer;
+}
+
+.mce-xen-body #bbm_adv_button .commands p:hover {
+	box-shadow: 0px 0px 2px {xen:property dimmedTextColor};
+}]]></template>
+  </templates>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
